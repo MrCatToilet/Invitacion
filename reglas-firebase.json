@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "rsvps": {
+      ".read": true,
+      "$id": {
+        ".write": true,
+        ".validate": "newData.hasChildren(['name','status','ts']) && newData.child('name').isString() && newData.child('name').val().length <= 40 && (newData.child('status').val() == 'yes' || newData.child('status').val() == 'no')"
+      }
+    }
+  }
+}
